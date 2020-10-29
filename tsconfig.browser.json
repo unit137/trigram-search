@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "build/browser",
+    "module": "commonjs"
+  },
+  "exclude": [
+    "node_modules/**",
+    "src/**/*.spec.ts"
+  ]
+}

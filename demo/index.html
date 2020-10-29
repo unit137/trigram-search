@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>trigram demo</title>
+</head>
+<body>
+<div id="demo">
+  <input v-model="input">
+  <ul>
+    <li
+      v-for="item in output"
+      :key="item.value.id"
+      @click="selected = JSON.stringify(item)"
+    >
+      <button>{{ item.value.title }}</button>
+    </li>
+  </ul>
+  <div>{{ selected }}</div>
+</div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+window.addEventListener('load', async () => {
+  const res = await fetch('/src/data/test-data.json');
+  const data = await res.json();
+
+  const searcher = new Trigram(data);
+  const demoApp = {
+    data() {
+      return {
+        input: '',
+        output: [],
+        selected: '',
+      }
+    },
+    watch: {
+      input(val) {
+        this.output = searcher.find(val);
+      },
+    }
+  };
+
+  Vue.createApp(demoApp).mount('#demo');
+});
+</script>
+</html>

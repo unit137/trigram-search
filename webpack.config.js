@@ -57,6 +57,7 @@ module.exports = {
     libraryExport: 'default',
     libraryTarget: 'umd',
     path: path.resolve(__dirname, './build/browser'),
+    filename: 'index.js',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

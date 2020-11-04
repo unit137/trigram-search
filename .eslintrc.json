@@ -9,9 +9,7 @@
     "eslint:recommended",
     "plugin:eslint-comments/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-        "prettier",
-    "prettier/@typescript-eslint"
+    "plugin:import/typescript"
   ],
   "globals": { "BigInt": true, "console": true, "WebAssembly": true },
   "rules": {

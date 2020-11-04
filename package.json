@@ -8,7 +8,15 @@
   "module": "build/module/index.js",
   "repository": "https://github.com/unit137/trigram-search",
   "license": "MIT",
-  "keywords": ["trigram", "fast", "text", "search", "typescript", "node", "browser"],
+  "keywords": [
+    "trigram",
+    "fast",
+    "text",
+    "search",
+    "typescript",
+    "node",
+    "browser"
+  ],
   "scripts": {
     "dev": "webpack serve",
     "build": "run-p build:*",
@@ -16,11 +24,9 @@
     "build:module": "tsc -p tsconfig.module.json",
     "build:browser": "cross-env NODE_ENV=production webpack",
     "fix": "run-s fix:*",
-    "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:lint": "eslint src --ext .ts --fix",
     "test": "run-s build test:*",
     "test:lint": "eslint src --ext .ts",
-    "test:prettier": "prettier \"src/**/*.ts\" --list-different",
     "test:unit": "nyc --silent ava",
     "check-cli": "run-s test diff-integration-tests check-integration-tests",
     "check-integration-tests": "run-s check-integration-test:*",
@@ -55,7 +61,6 @@
     "cspell": "^4.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.8.0",
-    "eslint-config-prettier": "^6.11.0",
     "eslint-formatter-friendly": "^7.0.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -65,7 +70,6 @@
     "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0",
     "open-cli": "^6.0.1",
-    "prettier": "^2.1.1",
     "standard-version": "^9.0.0",
     "terser-webpack-plugin": "^5.0.3",
     "ts-loader": "^8.0.8",
@@ -102,9 +106,6 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "prettier": {
-    "singleQuote": true
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",

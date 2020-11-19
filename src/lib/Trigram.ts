@@ -6,7 +6,7 @@ const { idField: defIdField, searchField: defSearchField, sortField: defSortFiel
 export class Trigram implements ITrigram {
 
   private items: TrigramInput = [];
-  private index: TrigramIndex = {};
+  private index: TrigramIndex = Object.create(null);
   private idField: string;
   private searchField: string;
   private sortField: string;

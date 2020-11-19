@@ -1,6 +1,6 @@
 {
   "name": "trigram-search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "trigram-based library for fast indexing and search over large arrays of data",
   "author": "Vladislav Spirin (https://github.com/unit137)",
   "main": "build/main/index.js",
